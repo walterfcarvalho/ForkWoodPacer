@@ -118,3 +118,12 @@ function save(form, event) {
     })
 })()
 
+
+
+/** inicio:
+ *                      Pc     Mob
+ *  desempenho          33     42
+ *  acessibilidade      70     78
+ *  praticas            70     71
+ *  seo                 82     82
+ */
