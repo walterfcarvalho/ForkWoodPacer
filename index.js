@@ -2,17 +2,26 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/fireba
 import { getFirestore, setDoc, doc, collection } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
 import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
 
-const firebaseConfig = {
-    apiKey: "AIzaSyAm7alZssivC27byHGhljLNnlNTvozANoU",
-    authDomain: "wodpacer-hosting.firebaseapp.com",
-    databaseURL: "https://wodpacer-hosting-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "wodpacer-hosting",
-    storageBucket: "wodpacer-hosting.appspot.com",
-    messagingSenderId: "543411213166",
-    appId: "1:543411213166:web:65f765a4407d73ebd1277f",
-    measurementId: "G-JXHVY4V0QN"
-  };
+// const firebaseConfig = {
+//     apiKey: "AIzaSyAm7alZssivC27byHGhljLNnlNTvozANoU",
+//     authDomain: "wodpacer-hosting.firebaseapp.com",
+//     databaseURL: "https://wodpacer-hosting-default-rtdb.europe-west1.firebasedatabase.app",
+//     projectId: "wodpacer-hosting",
+//     storageBucket: "wodpacer-hosting.appspot.com",
+//     messagingSenderId: "543411213166",
+//     appId: "1:543411213166:web:65f765a4407d73ebd1277f",
+//     measurementId: "G-JXHVY4V0QN"
+//   };
 
+const firebaseConfig = {
+    apiKey: "AIzaSyDnZ8ts0-ljk7G4R0jwB3Kdpuxh06pUKnY",
+    authDomain: "wodsite-1ef0c.firebaseapp.com",
+    projectId: "wodsite-1ef0c",
+    storageBucket: "wodsite-1ef0c.firebasestorage.app",
+    messagingSenderId: "2705551511",
+    appId: "1:2705551511:web:25807afec6d5174876b9d2",
+    measurementId: "G-2JDDP6K7X8"
+  };
 
 const app = initializeApp(firebaseConfig);
 
@@ -101,6 +110,8 @@ function save(form, event) {
 
 (function () {
     'use strict'
+
+
     const forms = document.querySelectorAll('.validation')
     
     Array.from(forms)
@@ -119,6 +130,22 @@ function save(form, event) {
 })()
 
 
+document.getElementsByClassName("video-container")[0].addEventListener("click", () => {
+    const frame = document.createElement('iframe');
+    const container = document.getElementsByClassName("video-container")[0];
+
+    frame.setAttribute('width', "560" );
+    frame.setAttribute('height', "315" );
+    frame.setAttribute('src', "https://www.youtube.com/embed/WAsqX-w1RoI?si=Z7-3c04F-Psj_ebw&autoplay=1");
+    frame.setAttribute('title', "YouTube video player" );
+    frame.setAttribute('frameborder', "0"); 
+    frame.setAttribute('allow', "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");  
+    frame.setAttribute('referrerpolicy', "strict-origin-when-cross-origin" );
+
+    container.removeChild(container.children[0]);
+    container.appendChild(frame);
+
+});
 
 document.getElementsByClassName("video-container")[1].addEventListener("click", () => {
     const video = document.createElement('video');
