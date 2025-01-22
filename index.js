@@ -32,12 +32,6 @@ async function new_user(first_name, last_name, email, created_at) {
   });
 }
 
-// const params = new Proxy(new URLSearchParams(window.location.search), {
-//     get: (searchParams, prop) => searchParams.get(prop),
-//   });
-// let cover_id = params.cover;
-
-// document.querySelector(".landing").style.backgroundImage=`url('./img/cover_v${cover_id}.png')`;
 
 // Link functionality
 const navLinks = document.querySelectorAll('.nav-link');
