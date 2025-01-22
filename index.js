@@ -120,6 +120,24 @@ function save(form, event) {
 
 
 
+document.getElementsByClassName("video-container")[1].addEventListener("click", () => {
+    const video = document.createElement('video');
+    const source = document.createElement('source');
+    const container = document.getElementsByClassName("video-container")[1];
+    
+    source.setAttribute('src', "./img/WODPacer_videoreel_c.mp4" );
+    source.setAttribute('type', 'video/mp4');
+
+    video.setAttribute('controls', true);
+    video.setAttribute('width', '280');
+    video.setAttribute('height','500');
+    video.setAttribute('autoplay', true);
+    video.appendChild(source);
+    
+    container.removeChild(container.children[0]);    
+    container.prepend(video);
+});
+
 /** inicio:
  *                      Pc     Mob
  *  desempenho          33     42
